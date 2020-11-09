@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/49d27b30ac.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="bundle.css">
+
+  <title>Plante Shop</title>
+</head>
+
+<body>
+  <div class="text-center">
+    <h1>Plante Shop Methods</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          <h2>Get all planter</h2>
+          <button id="GetAllPlanterBTN" class="btn btn-primary">GET</button>
+          <div id="GetAllPlanterDiv"></div>
+        </div>
+        <div class="col-lg">
+          <h2>Get plante by id</h2>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">ID</span>
+            </div>
+            <input type="number" id="GetPlanteInput" class="form-control" placeholder="ID" value="1">
+            <button id="GetPlanteBTN" class="btn btn-primary">GET</button>
+          </div>
+          <div id="GetPlanteDiv"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg">
+          <h2>Get plante by type</h2>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Type</span>
+            </div>
+            <input type="text" id="GetPlanteTypeInput" class="form-control" placeholder="Type">
+            <button id="GetPlanteTypeBTN" class="btn btn-primary">GET</button>
+          </div>
+          <div id="GetPlanteTypeDiv"></div>
+        </div>
+        <div class="col-lg">
+          <h2>Add plante</h2>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">PlanteType</span>
+            </div>
+            <input type="text" id="AddPlanteInputPlanteType" class="form-control" placeholder="PlanteType">
+          </div>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">PlanteNavn</span>
+            </div>
+            <input type="text" id="AddPlanteInputPlanteNavn" class="form-control" placeholder="PlanteNavn">
+          </div>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">MaksHoejde</span>
+            </div>
+            <input type="number" id="AddPlanteInputMaksHoejde" class="form-control" placeholder="MaksHoejde" value="0">
+          </div>
+          <div class="input-group mb3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Price</span>
+            </div>
+            <input type="number" id="AddPlanteInputPrice" class="form-control" placeholder="Price" value="0">
+          </div>
+          <button id="AddPlanteButton" class="btn btn-primary">POST</button>
+          <div id="AddPlanteDiv" class="d-flex justify-content-center"></div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <h2>Delete plante</h2>
+        <div class="input-group mb3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">ID</span>
+          </div>
+          <input type="number" id="DeletePlanteInput" class="form-control" placeholder="ID" value="1">
+          <button id="DeletePlanteBTN" class="btn btn-primary">DELETE</button>
+        </div>
+        <div id="DeletePlanteDiv"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
