@@ -1,7 +1,7 @@
 import * as api from './functions/apiMethods'
 import json2table from './functions/jsonToTable'
 import json2listgroup from './functions/jsonToListgroup'
-import Plante from './model/Plante';
+import IPlante from './model/IPlante';
 
 let GetAllPlanterBTN: HTMLButtonElement = <HTMLButtonElement>document.getElementById("GetAllPlanterBTN");
 let GetAllPlanterDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("GetAllPlanterDiv");
@@ -43,7 +43,7 @@ AddPlanteButton.addEventListener('click', async () => {
     let uri = "https://planteshoprestservice.azurewebsites.net/api/PlanteController"
     let PlanteListCount = await api.getPlantes(uri);
     if (AddPlanteInputPlanteType.value == "" || AddPlanteInputPlanteNavn.value == "") { return }
-    let newPlante: Plante = {
+    let newPlante: IPlante = {
         PlanteId: PlanteListCount.data.length + 1,
         PlanteType: AddPlanteInputPlanteType.value,
         PlanteNavn: AddPlanteInputPlanteNavn.value,

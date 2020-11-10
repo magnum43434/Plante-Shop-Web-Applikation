@@ -1,4 +1,4 @@
-export default interface Plante {
+export default interface IPlante {
     PlanteId: number;
     PlanteType: string;
     PlanteNavn: string;
